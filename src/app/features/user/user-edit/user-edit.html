@@ -1,1 +1,14 @@
-<p>user-edit works!</p>
+<h2>Edit User</h2>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <input formControlName="id" type="hidden">
+
+  <input formControlName="username" placeholder="Username"><br>
+  <input formControlName="password" placeholder="Password" type="password"><br>
+  <input formControlName="firstName" placeholder="First Name"><br>
+  <input formControlName="lastName" placeholder="Last Name"><br>
+  <input formControlName="phoneNumber" placeholder="Phone Number"><br>
+  <input formControlName="email" placeholder="Email"><br>
+  <label><input type="checkbox" formControlName="reviewer"> Reviewer</label><br>
+  <label><input type="checkbox" formControlName="admin"> Admin</label><br>
+  <button type="submit">Save</button>
+</form>

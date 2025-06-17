@@ -1,1 +1,14 @@
-<p>product-detail works!</p>
+<h2>Product Detail</h2>
+<p><strong>Part Number:</strong> {{ product.partNumber }}</p>
+<p><strong>Name:</strong> {{ product.name }}</p>
+<p><strong>Price:</strong> \${{ product.price }}</p>
+<p><strong>Unit:</strong> {{ product.unit || 'N/A' }}</p>
+<p><strong>Photo:</strong>
+  <span *ngIf="product.photoPath">
+    <img [src]="product.photoPath" width="100" alt="Product Image">
+  </span>
+  <span *ngIf="!product.photoPath">No image</span>
+</p>
+
+<button routerLink="/products/edit/{{ product.id }}">Edit</button>
+<button (click)="deleteProduct()">Delete</button>

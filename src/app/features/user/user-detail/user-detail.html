@@ -1,1 +1,12 @@
-<p>user-detail works!</p>
+<h2>User Detail</h2>
+
+<p><strong>ID:</strong> {{ user.id }}</p>
+<p><strong>Username:</strong> {{ user.username }}</p>
+<p><strong>Name:</strong> {{ user.firstName }} {{ user.lastName }}</p>
+<p><strong>Phone:</strong> {{ user.phoneNumber }}</p>
+<p><strong>Email:</strong> {{ user.email }}</p>
+<p><strong>Reviewer:</strong> {{ user.reviewer ? '✔️' : '❌' }}</p>
+<p><strong>Admin:</strong> {{ user.admin ? '✔️' : '❌' }}</p>
+
+<button routerLink="/users/edit/{{ user.id }}">Edit</button>
+<button (click)="deleteUser()">Delete</button>
