@@ -5,7 +5,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing-module';
-import { Appcomponent } from './app';
+import { AppComponent } from './app';
 
 // User components
 import { UserListComponent } from './features/user/user-list';
@@ -33,16 +33,11 @@ import { RequestDetailComponent } from './features/request/request-detail';
 import { RequestLinesComponent } from './features/request/request-lines';
 import { LineItemCreateComponent } from './features/request/line-item-create';
 import { LineItemEditComponent } from './request/line-item-edit';
-import { User } from './model/user';
-import { LineItem } from './model/line-item';
-import { Product } from './model/product';
-import { Vendor } from './model/vendor';
-import { Request } from './model/request';
+
 
 @NgModule({
   declarations: [
-    
-    Appcomponent,
+    AppComponent,
 
     // Users
     UserListComponent,
@@ -69,12 +64,7 @@ import { Request } from './model/request';
     RequestDetailComponent,
     RequestLinesComponent,
     LineItemCreateComponent,
-    LineItemEditComponent,
-    User,
-    LineItem,
-    Product,
-    Vendor,
-    Request
+    LineItemEditComponent
   ],
   imports: [
     BrowserModule,
@@ -82,6 +72,6 @@ import { Request } from './model/request';
     HttpClientModule,
     AppRoutingModule
   ],
-  bootstrap: [Appcomponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule {}

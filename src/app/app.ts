@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   standalone: false,
   styleUrl: './app.css'
 })
-export class Appcomponent {
+export class AppComponent {
   protected title = 'prs-spa';
 }
