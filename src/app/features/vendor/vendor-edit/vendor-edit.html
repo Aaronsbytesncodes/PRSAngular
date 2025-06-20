@@ -1,1 +1,12 @@
-<p>vendor-edit works!</p>
+<h2>Edit Vendor</h2>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <input formControlName="code" placeholder="Code"><br>
+  <input formControlName="name" placeholder="Name"><br>
+  <input formControlName="address" placeholder="Address"><br>
+  <input formControlName="city" placeholder="City"><br>
+  <input formControlName="state" placeholder="State"><br>
+  <input formControlName="zip" placeholder="ZIP"><br>
+  <input formControlName="phoneNumber" placeholder="Phone"><br>
+  <input formControlName="email" placeholder="Email"><br>
+  <button type="submit">Create</button>
+</form>

@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { UserList } from './user-list/user-list';
-import { UserDetail } from './user-detail/user-detail';
-import { UserEdit } from './user-edit/user-edit';
-import { UserCreate } from './user-create/user-create';
-import { UserDelete } from './user-delete/user-delete';
+import { UserList, UserListComponent } from './user-list/user-list';
+import { UserDetail, UserDetailComponent } from './user-detail/user-detail';
+import { UserEdit, UserEditComponent } from './user-edit/user-edit';
+import { UserCreate, UserCreateComponent } from './user-create/user-create';
+import { UserLogin } from './user-login/user-login';
 
 
 
@@ -14,7 +14,8 @@ import { UserDelete } from './user-delete/user-delete';
     UserDetail,
     UserEdit,
     UserCreate,
-    UserDelete
+    UserLogin
+
   ],
   imports: [
     CommonModule

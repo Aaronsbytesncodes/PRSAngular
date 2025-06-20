@@ -3,30 +3,30 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 // Users
-import { UserListComponent } from './features/user/user-list';
-import { UserCreateComponent } from './features/user/user-create';
-import { UserEditComponent } from './features/user/user-edit';
-import { UserDetailComponent } from './features/user/user-detail';
+import { UserListComponent } from './features/user/user-list/user-list';
+import { UserCreateComponent } from './features/user/user-create/user-create';
+import { UserEditComponent } from './features/user/user-edit/user-edit';
+import { UserDetailComponent } from './features/user/user-detail/user-detail';
 
 // Vendors
-import { VendorListComponent } from './features/vendor/vendor-list';
-import { VendorCreateComponent } from './features/vendor/vendor-create';
-import { VendorEditComponent } from './features/vendor/vendor-edit';
-import { VendorDetailComponent } from './features/vendor/vendor-detail';
+import { VendorListComponent } from './features/vendor/vendor-list/vendor-list';
+import { VendorCreateComponent } from './features/vendor/vendor-create/vendor-create';
+import { VendorEditComponent } from './features/vendor/vendor-edit/vendor-edit';
+import { VendorDetailComponent } from './features/vendor/vendor-detail/vendor-detail';
 
 // Products
-import { ProductListComponent } from './features/product/product-list';
-import { ProductCreateComponent } from './features/product/product-create';
-import { ProductEditComponent } from './features/product/product-edit';
-import { ProductDetailComponent } from './features/product/product-detail';
+import { ProductListComponent } from './features/product/product-list/product-list';
+import { ProductCreateComponent } from './features/product/product-create/product-create';
+import { ProductEditComponent } from './features/product/product-edit/product-edit';
+import { ProductDetailComponent } from './features/product/product-detail/product-detail';
 
 // Requests & LineItems
-import { RequestListComponent } from './features/request/request-list';
-import { RequestCreateComponent } from './features/request/request-create';
-import { RequestEditComponent } from './features/request/request-edit';
+import { RequestListComponent } from './features/request/request-list/request-list';
+import { RequestCreateComponent } from './features/request/request-create/request-create';
+import { RequestEditComponent } from './features/request/request-edit/request-edit';
 import { RequestDetailComponent } from './features/request/request-detail';
 import { RequestLinesComponent } from './features/request/request-lines';
-import { LineItemCreateComponent } from './features/request/line-item-create';
+import { LineItemCreateComponent } from './features/request/line-item-create/line-item-create';
 import { LineItemEditComponent } from './features/request/line-item-edit';
 
 const routes: Routes = [

@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-list',
+    standalone: false,
   templateUrl: './product-list.html'
 })
 export class ProductListComponent implements OnInit {

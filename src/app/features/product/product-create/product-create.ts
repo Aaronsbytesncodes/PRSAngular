@@ -6,7 +6,9 @@ import { VendorService, Vendor } from 'src/app/core/services/vendor.service';
 
 @Component({
   selector: 'app-product-create',
+    standalone: false,
   templateUrl: './product-create.html'
+  
 })
 export class ProductCreateComponent implements OnInit {
   form!: FormGroup;

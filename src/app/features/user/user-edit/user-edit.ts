@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { UserService } from 'src/app/core/services/user.service';
+import { UserService } from '../services/userservice';
 
 @Component({
   selector: 'app-user-edit',
-  templateUrl: './user-edit.component.html'
+    standalone: false,
+  templateUrl: './user-edit.html'
 })
 export class UserEditComponent implements OnInit {
   form!: FormGroup;

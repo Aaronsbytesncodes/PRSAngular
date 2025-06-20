@@ -1,11 +1,32 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { VendorService } from 'src/app/core/services/vendor';
+import { Vendor } from 'src/app/models/vendor';
 
 @Component({
   selector: 'app-vendor-detail',
-  standalone: false,
-  templateUrl: './vendor-detail.html',
-  styleUrl: './vendor-detail.css'
+    standalone: false,
+  templateUrl: './vendor-detail.html'
 })
-export class VendorDetail {
+export class VendorDetailComponent implements OnInit {
+  vendor!: Vendor;
 
+  constructor(
+    private vendorService: VendorService,
+    private route: ActivatedRoute,
+    private router: Router
+  ) {}
+
+  ngOnInit(): void {
+    const id = +this.route.snapshot.paramMap.get('id')!;
+    this.vendorService.getById(id).subscribe(v => this.vendor = v);
+  }
+
+  delete(): void {
+    if (confirm('Delete this vendor?')) {
+      this.vendorService.delete(this.vendor.id).subscribe(() => {
+        this.router.navigate(['/vendors']);
+      });
+    }
+  }
 }

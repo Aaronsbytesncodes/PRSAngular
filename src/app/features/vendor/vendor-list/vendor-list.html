@@ -1,1 +1,24 @@
-<p>vendor-list works!</p>
+<h2>Vendor List</h2>
+<button routerLink="/vendors/create">+ Create Vendor</button>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>ID</th><th>Name</th><th>Code</th><th>Phone</th><th>Email</th><th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let vendor of vendors">
+      <td>{{ vendor.id }}</td>
+      <td>{{ vendor.name }}</td>
+      <td>{{ vendor.code }}</td>
+      <td>{{ vendor.phoneNumber }}</td>
+      <td>{{ vendor.email }}</td>
+      <td>
+        <a [routerLink]="['/vendors/detail', vendor.id]">Detail</a> |
+        <a [routerLink]="['/vendors/edit', vendor.id]">Edit</a> |
+        <button (click)="deleteVendor(vendor.id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

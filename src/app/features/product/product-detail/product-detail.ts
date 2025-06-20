@@ -4,6 +4,7 @@ import { Product, ProductService } from 'src/app/core/services/product';
 
 @Component({
   selector: 'app-product-detail',
+    standalone: false,
   templateUrl: './product-detail.component.html'
 })
 export class ProductDetailComponent implements OnInit {

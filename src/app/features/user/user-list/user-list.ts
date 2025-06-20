@@ -1,29 +1,33 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { UserService, User } from 'src/app/core/services/user';
+
+import { UserService } from '..\services\user';
 
 @Component({
   selector: 'app-user-list',
-  templateUrl: './user-list.component.html'
+    standalone: false,
+  templateUrl: './user-list.html'
 })
 export class UserListComponent implements OnInit {
-  users: User[] = [];
 
-  constructor(private userService: UserService, private router: Router) {}
+
+ 
+
+  constructor() {}
 
   ngOnInit(): void {
     this.loadUsers();
   }
 
   loadUsers(): void {
-    this.userService.getAll().subscribe(users => {
+    this.UserService.getAll().subscribe((users: User[]) => {
       this.users = users;
     });
   }
 
   deleteUser(id: number): void {
     if (confirm('Are you sure you want to delete this user?')) {
-      this.userService.delete(id).subscribe(() => this.loadUsers());
+      this.UserService.delete(id).subscribe(() => this.loadUsers());
     }
   }
 }

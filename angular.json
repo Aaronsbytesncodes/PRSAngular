@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "prs-spa": {
+    "bmdb-ng-20250331": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:class": {
@@ -91,7 +91,7 @@
             }
           },
           "defaultConfiguration": "development"
-        },
+       },
         "extract-i18n": {
           "builder": "@angular/build:extract-i18n"
         },

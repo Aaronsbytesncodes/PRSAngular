@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { LineItem } from 'src/app/model/line-item';
+import { LineItem } from '../model/line-itemmodel';
 import { Observable } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })

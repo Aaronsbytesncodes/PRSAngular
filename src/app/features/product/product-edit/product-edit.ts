@@ -6,6 +6,7 @@ import { VendorService, Vendor } from 'src/app/core/services/vendor.service';
 
 @Component({
   selector: 'app-product-edit',
+    standalone: false,
   templateUrl: './product-edit.component.html'
 })
 export class ProductEditComponent implements OnInit {

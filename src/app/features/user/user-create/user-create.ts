@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { UserService } from '../../../services/user'; 
-import { User } from '../../../model/user';
+import { UserService } from '../../../services/userservice'; 
+import { User } from '../../../model/usermodel';
 @Component({
   selector: 'app-user-create',
+    standalone: false,
   templateUrl: './user-create.html'
 })
 export class UserCreateComponent {
