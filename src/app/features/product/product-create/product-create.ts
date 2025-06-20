@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { ProductService } from 'src/app/core/services/product.service';
-import { VendorService, Vendor } from 'src/app/core/services/vendor.service';
+import { ProductService } from '../../../services/productservice';
+import { VendorService } from '../../../services/vendorservice';
+import { Vendor } from '../../../model/vendormodel';
 
 @Component({
   selector: 'app-product-create',

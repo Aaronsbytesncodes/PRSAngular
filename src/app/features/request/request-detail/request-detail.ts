@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { RequestService } from 'src/app/core/services/requestservice';
-import { Request } from '../models/requestmodel';
+import { RequestService } from '../../../services/requestservice';
+import { Request } from '../../../model/requestmodel';
 
 @Component({
   selector: 'app-request-detail',
@@ -11,16 +11,16 @@ import { Request } from '../models/requestmodel';
 export class RequestDetailComponent implements OnInit {
   request!: Request;
 
-  constructor(private service: RequestService, private route: ActivatedRoute, private router: Router) {}
+  constructor(private requestService: RequestService, private route: ActivatedRoute, private router: Router) {}
 
   ngOnInit(): void {
     const id = +this.route.snapshot.paramMap.get('id')!;
-    this.service.getById(id).subscribe(data => this.request = data);
+    this.requestService.getById(id).subscribe(data => this.request = data);
   }
 
   delete(): void {
     if (confirm('Delete request?')) {
-      this.service.delete(this.request.id).subscribe(() => {
+      this.requestService.delete(this.request.id).subscribe(() => {
         this.router.navigate(['/requests']);
       });
     }

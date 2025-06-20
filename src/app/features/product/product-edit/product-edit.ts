@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { ProductService } from 'src/app/core/services/product.service';
-import { VendorService, Vendor } from 'src/app/core/services/vendor.service';
+import { ProductService } from '../../../services/productservice';
+import { VendorService } from '../../../services/vendorservice';
+import { Vendor } from '../../../model/vendormodel';
 
 @Component({
   selector: 'app-product-edit',
     standalone: false,
-  templateUrl: './product-edit.component.html'
+  templateUrl: './product-edit.html'
 })
 export class ProductEditComponent implements OnInit {
   form!: FormGroup;

@@ -1,15 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { RequestService } from 'src/app/core/services/requestservice';
-import { LineItemService } from 'src/app/core/services/line-itemservice';
+import { RequestService } from 'src\app\services\requestservice.ts';
+import { LineItemService } from 'src\app\services\line-itemservice.ts';
 import { Request } from 'src/app/models/requestmodel';
 import { LineItem } from 'src/app/models/line-itemmodel';
 
+
 @Component({
   selector: 'app-request-lines',
-    standalone: false,
-  templateUrl: './request-lines.html'
+  templateUrl: './request-lines.html',
+  styleUrls: ['./request-lines.css']
 })
+
 export class RequestLinesComponent implements OnInit {
   request!: Request;
   lineItems: LineItem[] = [];

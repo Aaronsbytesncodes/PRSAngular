@@ -1,17 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { UserService } from '../../../services/userservice';
+import { User } from '../../../model/usermodel';
 
-import { UserService } from 'src\app\services\userservice';
 @Component({
   selector: 'app-user-detail',
-    standalone: false,
-  templateUrl: './user-detail.component.html'
+  standalone: false,
+  templateUrl: './user-detail.html'
 })
 export class UserDetailComponent implements OnInit {
- 
+  user!: User;
 
   constructor(
-    private userservice: UserService,
+    private userService: UserService,
     private route: ActivatedRoute,
     private router: Router
   ) {}

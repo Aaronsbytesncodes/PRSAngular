@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "bmdb-ng-20250331": {
+    "prs-spa": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:class": {

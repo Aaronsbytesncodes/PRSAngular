@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { VendorService } from 'src/app/core/services/vendor';
-import { Vendor } from 'src/app/models/vendor';
+import { VendorService } from '../../../services/vendorservice';
+import { Vendor } from '../../../model/vendormodel';
 
 @Component({
   selector: 'app-vendor-edit',
-    standalone: false,
+   standalone: false,
   templateUrl: './vendor-edit.html'
 })
 export class VendorEditComponent implements OnInit {

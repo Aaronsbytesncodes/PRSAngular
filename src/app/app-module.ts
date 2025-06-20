@@ -72,7 +72,7 @@ import { ErrorHandler, Provider } from '@angular/core';
     LineItemEditComponent,
     UserLogin
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule,HttpClientModule ],
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideHttpClient(withInterceptorsFromDi()),

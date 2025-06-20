@@ -1,13 +1,13 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { VendorService } from 'src/app/core/services/vendorservice';
-import { Vendor } from 'src/app/models/vendormodel';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { VendorService } from '../../../services/vendorservice';
+import { Vendor } from '../../../model/vendormodel';
 
 @Component({
   selector: 'app-vendor-list',
+  standalone: false,
   templateUrl: './vendor-list.html',
-  
 })
 export class VendorListComponent implements OnInit, OnDestroy {
   vendors: Vendor[] = [];

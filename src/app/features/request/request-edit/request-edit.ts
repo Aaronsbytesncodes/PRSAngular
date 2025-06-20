@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { RequestService } from 'src/app/core/services/request.service';
+import { RequestService } from '../../../services/requestservice';
 
 @Component({
   selector: 'app-request-edit',

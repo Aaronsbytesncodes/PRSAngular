@@ -5,8 +5,9 @@ import { UserService } from '../../../services/userservice';
 import { User } from '../../../model/usermodel';
 @Component({
   selector: 'app-user-create',
-    standalone: false,
-  templateUrl: './user-create.html'
+  templateUrl: './user-create.html',
+  standalone: false,
+  styleUrls: ['./user-create.css']
 })
 export class UserCreateComponent {
   form: FormGroup;
