@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { VendorService } from '../../../services/vendorservice';
+import { VendorService } from '../../../services/vendor-service';
 import { Vendor } from '../../../model/vendormodel';
 
 @Component({

@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { VendorService } from '../../../services/vendorservice';
+import { VendorService } from '../../../services/vendor-service';
 import { Vendor } from '../../../model/vendormodel';
 
 @Component({

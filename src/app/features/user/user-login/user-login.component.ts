@@ -3,8 +3,7 @@ import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { UserLoginDTO } from '../../../model/user-login-dto';
 import { User } from '../../../model/usermodel';
-import { UserService } from '../../../services/userservice';
-import { SystemService } from '../services/systemservice';
+import { UserService } from '../../../services/user-service';
 
 @Component({
   selector: 'app-user-login',
@@ -21,10 +20,7 @@ export class UserLogin implements OnInit, OnDestroy {
 
   constructor(
     private userSvc: UserService,
-    private router: Router,
-    // Use @Inject if SystemService is provided via a string or InjectionToken
-    // @Inject(SystemService) private sysSvc: SystemService
-    private sysSvc: SystemService
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -40,13 +36,12 @@ export class UserLogin implements OnInit, OnDestroy {
   login() {
     console.log("UserLogin", this.userLoginDTO);
     this.subscription = this.userSvc.login(this.userLoginDTO.email, this.userLoginDTO.password).subscribe({
-      next: (resp) => {
+      next: (resp: User) => {
         // successful login
-        this.sysSvc.loggedInUser = resp;
-        // nav to user list (update route as needed)
+        // You can add logic here to store the user if needed
         this.router.navigateByUrl('/users');
       },
-      error: (err) => {
+      error: (err: any) => {
         // unsuccessful login
         this.message = 'Invalid login - bad email/pwd combo';
       },

@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductService } from 'src/app/core/services/productservice';
 import { LineItemService } from 'src/app/core/services/line-itemservice';
-import { Product } from 'src/app/models/productmodel';
+import { Product } from 'src/app/model/productmodel';
 
 @Component({
   selector: 'app-line-item-create',

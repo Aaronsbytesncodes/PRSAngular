@@ -1,17 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { Router } from '@angular/router';
-import { UserService } from '../../../services/userservice';
-import { User } from '../../../model/usermodel';
+import { UserService } from 'src/app/services/user.service';
+
+import { User } from 'src/app/model/user.model';
 
 @Component({
   selector: 'app-user-list',
-    standalone: false,
-  templateUrl: './user-list.html'
+  standalone: false,
+  templateUrl: './user-list.html',
+  providers: [UserService]
 })
 export class UserListComponent implements OnInit {
   users: User[] = [];
 
-  constructor(private userService: UserService, private router: Router) {}
+  constructor(
+    @Inject(UserService) private userService: UserService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.loadUsers();

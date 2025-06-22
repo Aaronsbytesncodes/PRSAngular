@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { LineItemService } from 'src/app/core/services/line-itemservice';
-import { LineItem } from 'src/app/models/line-itemmodel';
+import { LineItemService } from '../../../services/line-item-service';
 
 @Component({
   selector: 'app-line-item-edit',
@@ -19,7 +18,7 @@ export class LineItemEditComponent implements OnInit {
   ngOnInit(): void {
     this.requestId = +this.route.snapshot.paramMap.get('id')!;
     this.lineItemId = +this.route.snapshot.paramMap.get('lineItemId')!;
-    this.lineItemService.getById(this.lineItemId).subscribe(item => {
+    this.lineItemService.getById(this.lineItemId).subscribe((item: any) => {
       this.form = this.fb.group({ ...item });
     });
   }

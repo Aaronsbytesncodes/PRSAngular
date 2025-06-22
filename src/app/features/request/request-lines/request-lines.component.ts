@@ -1,13 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { RequestService } from 'src\app\services\requestservice.ts';
-import { LineItemService } from 'src\app\services\line-itemservice.ts';
-import { Request } from 'src/app/models/requestmodel';
-import { LineItem } from 'src/app/models/line-itemmodel';
+import { RequestService } from '../../../services/request-service';
+import { LineItemService } from '../../../services/line-item-service';
+import { Request } from '../../../model/requestmodel';
+import { LineItem } from '../../../model/line-itemmodel';
+import { UserService } from '../../../services/user-service';
 
 
 @Component({
   selector: 'app-request-lines',
+  standalone: false,
   templateUrl: './request-lines.html',
   styleUrls: ['./request-lines.css']
 })
@@ -25,8 +27,8 @@ export class RequestLinesComponent implements OnInit {
   }
 
   refresh(): void {
-    this.requestService.getById(this.id).subscribe(r => this.request = r);
-    this.lineItemService.getForRequest(this.id).subscribe(items => this.lineItems = items);
+    this.requestService.getById(this.id).subscribe((r: Request) => this.request = r);
+    this.lineItemService.getForRequest(this.id).subscribe((items: LineItem[]) => this.lineItems = items);
   }
 
   deleteLineItem(id: number): void {
